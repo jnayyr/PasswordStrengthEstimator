@@ -26,7 +26,7 @@ namespace PasswordStrengthEstimator
         {
             string password = txtPassword.Text;
 
-            if (password.Length >= 10 && password.Any(char.IsDigit) && password.Any(char.IsLetter))
+            if (password.Length >= 10 && password.Any(char.IsUpper) && password.Any(char.IsLetterOrDigit))
             {
                 lblResult.Text = "Good";
                 lblResult.BackColor = Color.LightGreen;
